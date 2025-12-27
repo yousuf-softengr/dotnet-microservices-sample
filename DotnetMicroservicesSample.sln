@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Domain", "Catalog.Domain\Catalog.Domain.csproj", "{A4881286-5D35-4021-A993-522C4D1E40F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Application", "Catalog.Application\Catalog.Application.csproj", "{BFCC18C0-83BD-4A46-BBAA-198085CD3A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A4881286-5D35-4021-A993-522C4D1E40F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4881286-5D35-4021-A993-522C4D1E40F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4881286-5D35-4021-A993-522C4D1E40F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCC18C0-83BD-4A46-BBAA-198085CD3A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCC18C0-83BD-4A46-BBAA-198085CD3A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCC18C0-83BD-4A46-BBAA-198085CD3A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCC18C0-83BD-4A46-BBAA-198085CD3A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{F06619DF-048B-4753-A93A-8CB2E71BFDA0} = {37DD943B-2259-4984-A483-E3E45707C148}
 		{37DD943B-2259-4984-A483-E3E45707C148} = {11970234-5C2F-4C15-ADB4-B613E69BD64E}
 		{A4881286-5D35-4021-A993-522C4D1E40F9} = {F3E1FA8B-BDA9-4AAD-97B2-574FEA289BA9}
+		{BFCC18C0-83BD-4A46-BBAA-198085CD3A40} = {F3E1FA8B-BDA9-4AAD-97B2-574FEA289BA9}
 	EndGlobalSection
 EndGlobal
