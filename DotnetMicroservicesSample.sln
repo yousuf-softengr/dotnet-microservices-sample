@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{11970234-5C2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F3E1FA8B-BDA9-4AAD-97B2-574FEA289BA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "Order.API\Order.API.csproj", "{D24474EB-33F5-44CD-B61A-D7B53C8039DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,16 @@ Global
 		{DB740357-342B-46EB-943D-B62CF81FEE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB740357-342B-46EB-943D-B62CF81FEE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB740357-342B-46EB-943D-B62CF81FEE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24474EB-33F5-44CD-B61A-D7B53C8039DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24474EB-33F5-44CD-B61A-D7B53C8039DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24474EB-33F5-44CD-B61A-D7B53C8039DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24474EB-33F5-44CD-B61A-D7B53C8039DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DB740357-342B-46EB-943D-B62CF81FEE18} = {F3E1FA8B-BDA9-4AAD-97B2-574FEA289BA9}
+		{D24474EB-33F5-44CD-B61A-D7B53C8039DA} = {F3E1FA8B-BDA9-4AAD-97B2-574FEA289BA9}
 	EndGlobalSection
 EndGlobal
