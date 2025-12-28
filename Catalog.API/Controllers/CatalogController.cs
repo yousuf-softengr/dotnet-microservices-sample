@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Catalog.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Catalog.API.Controllers
+namespace Catalog.API.Controllers;
+
+[ApiController]
+[Route("api/catalog")]
+public class CatalogController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CatalogController : ControllerBase
+    private readonly IProductRepository _repository;
+
+    public CatalogController(IProductRepository repository)
     {
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok(new[]
-            {
-            new { Id = 1, Name = "Laptop", Price = 1200 },
-            new { Id = 2, Name = "Mouse", Price = 20 }
-        });
-        }
+        _repository = repository;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var products = await _repository.GetAllAsync();
+        return Ok(products);
     }
 }
