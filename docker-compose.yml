@@ -1,6 +1,51 @@
+version: '3.8'
+
 services:
   catalog.api:
-    image: ${DOCKER_REGISTRY-}catalogapi
+    image: catalog.api
     build:
       context: .
-      dockerfile: Catalog.API/Dockerfile
+      dockerfile: src/Services/Catalog.API/Dockerfile
+    container_name: catalog.api
+    depends_on:
+      - sqlserver
+    ports:
+      - "5001:8083"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=CatalogDb;User Id=sa;Password=Sa@123456;TrustServerCertificate=True;Encrypt=False;
+
+  order.api:
+    image: order.api
+    build:
+      context: .
+      dockerfile: src/Services/Order.API/Dockerfile
+    container_name: order.api
+    ports:
+      - "5002:8083"
+
+  apigateway:
+    image: apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/ApiGateway/Dockerfile
+    container_name: apigateway
+    depends_on:
+      - catalog.api
+      - order.api
+    ports:
+      - "5000:8083"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "Sa@123456"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:
